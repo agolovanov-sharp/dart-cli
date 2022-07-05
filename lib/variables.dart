@@ -1,5 +1,6 @@
 int? initialCount;
 int mustHaveValue = 0;
+late String description;
 
 void tapVariables() {
   // assert(initialCount != null); will throw dev time exception
@@ -20,4 +21,19 @@ void shouldInitVars() {
 
   // error - using of unassigned variable
   // print(count);
+}
+
+void lateVarUsing() {
+  description = 'I have value';
+  print(description);
+}
+
+void immutableConstant() {
+  const defaultUsers = ['Alex', 'Rick'];
+  // defaultUsers = []; error - cant be assigned
+  var actualUsers = defaultUsers;
+  // actualUsers.add('Ironman'); // runtime error - list is immutable
+  actualUsers = ['Ironman']; // works - reassign var
+
+  print(actualUsers);
 }
