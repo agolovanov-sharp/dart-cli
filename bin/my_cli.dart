@@ -4,6 +4,7 @@ import 'package:my_cli/variables.dart' as variables;
 import 'package:my_cli/builtin_types.dart' as typesTest;
 import 'package:my_cli/functions.dart' as functions;
 import 'package:my_cli/operators.dart' as operators;
+import 'package:my_cli/classes.dart' as classes;
 
 void printNumber(int aNumber) {
   print('The number is $aNumber');
@@ -31,5 +32,10 @@ void main(List<String> arguments) {
   functions.isEqualFuncs();
 
   print('--------OPERATORS-------');
+
   operators.testCascade();
+  print('--------CLASSES-------');
+
+  classes.tryChangeFinal();
+  classes.testConstructors();
 }
